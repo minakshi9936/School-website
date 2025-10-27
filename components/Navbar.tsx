@@ -99,9 +99,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div
-            className={`hidden lg:flex items-center space-x-8 font-medium ${
-              isScrolled || !isHomePage ? 'text-gray-800' : 'text-white'
-            }`}
+            className={`hidden lg:flex items-center space-x-8 font-medium  text-gray-800`}
           >
             <Link href="/" className="px-3 py-2 hover:text-green-600 transition-colors duration-200">
               Home
