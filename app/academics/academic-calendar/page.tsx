@@ -152,7 +152,7 @@ export default function AcademicCalendar() {
                 ))
               ) : (
                 <tr>
-                  <td colSpan="4" className="text-center py-6 text-gray-500">
+                  <td colSpan={4} className="text-center py-6 text-gray-500">
                     No matching records found.
                   </td>
                 </tr>
