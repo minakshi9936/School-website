@@ -219,7 +219,7 @@ export default function Navbar() {
                         <Link
                           href={item.path}
                           className="block py-2 hover:text-green-600 transition"
-                          onClick={() => setSelectedNews(null)}
+                          onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {item.name}
                         </Link>
