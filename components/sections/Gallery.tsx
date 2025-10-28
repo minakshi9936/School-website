@@ -47,18 +47,18 @@ export default function Gallery() {
     <SectionWrapper id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Campus{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               Gallery
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Explore our state-of-the-art facilities and vibrant campus life
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {images.map((image, index) => (
             <motion.div
               key={index}
@@ -75,11 +75,11 @@ export default function Gallery() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <p className="font-semibold text-lg">{image.title}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 text-white">
+                  <p className="font-semibold text-base md:text-lg">{image.title}</p>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <ZoomIn className="w-12 h-12 text-white" />
+                  <ZoomIn className="w-8 h-8 md:w-12 md:h-12 text-white" />
                 </div>
               </div>
             </motion.div>
@@ -100,7 +100,7 @@ export default function Gallery() {
               onClick={() => setSelectedImage(null)}
               className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
             >
-              <X className="w-8 h-8" />
+              <X className="w-6 h-6 md:w-8 md:h-8" />
             </button>
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -114,7 +114,7 @@ export default function Gallery() {
                 alt={selectedImage.title}
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
-              <p className="text-white text-center text-xl font-semibold mt-4">
+              <p className="text-white text-center text-lg md:text-xl font-semibold mt-4">
                 {selectedImage.title}
               </p>
             </motion.div>

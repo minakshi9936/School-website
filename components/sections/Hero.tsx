@@ -9,9 +9,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-24"
     >
-      <div className="absolute inset-0" style={{ backgroundImage: `url('https://i.pinimg.com/736x/eb/a3/52/eba3525f02be3984aea71e3addf0bac3.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="absolute inset-0 bg-responsive" style={{ backgroundImage: `url('https://i.pinimg.com/736x/eb/a3/52/eba3525f02be3984aea71e3addf0bac3.jpg')`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-yellow-50 opacity-70" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgwLDAsMCwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
       </div>
@@ -36,13 +36,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight"
           >
             Shaping{' '}
             <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
               Bright Futures
             </span>
-            <br />
+            <br className="hidden sm:block" />
             Through Education
           </motion.h1>
 
@@ -50,7 +50,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl sm:text-2xl text-gray-600 mb-10 leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed max-w-4xl mx-auto"
           >
             Empowering students with knowledge, skills, and values to thrive in a changing world
           </motion.p>
@@ -59,13 +59,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4"
           >
             <AnimatedButton
               variant="primary"
               onClick={() => document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Admissions Open <ArrowRight className="inline ml-2 w-5 h-5" />
+              Admissions Open <ArrowRight className="inline ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </AnimatedButton>
             <AnimatedButton
               variant="secondary"
@@ -79,7 +79,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 px-4"
           >
             {[
               { number: 15, label: 'Years Excellence' },
@@ -88,10 +88,10 @@ export default function Hero() {
               { number: 95, label: 'Success Rate' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                   <CountUp end={stat.number} duration={2} suffix={stat.label === 'Success Rate' ? '%' : '+'} />
                 </div>
-                <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-gray-600 mt-1">{stat.label}</div>
               </div>
             ))}
           </motion.div>

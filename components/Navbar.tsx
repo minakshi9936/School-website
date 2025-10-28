@@ -57,15 +57,15 @@ export default function Navbar() {
     <div className="w-full fixed top-0 left-0 z-50">
       {/* === Top Utility Bar === */}
       <div className="bg-gray-100 border-b border-gray-200 py-1">
-        <div className="container mx-auto flex flex-wrap justify-end items-center gap-4 text-sm text-gray-700 px-4">
-          <Link href="/admission/admission-form" className="flex items-center gap-1 hover:text-blue-700 transition">
-            <FileText className="w-4 h-4" /> Admission Form
+        <div className="container mx-auto flex flex-wrap justify-center md:justify-end items-center gap-2 md:gap-4 text-xs md:text-sm text-gray-700 px-4">
+          <Link href="/admission/admission-form" className="flex items-center gap-1 hover:text-blue-700 transition whitespace-nowrap">
+            <FileText className="w-3 h-3 md:w-4 md:h-4" /> Admission Form
           </Link>
-          <Link href="/contact" className="flex items-center gap-1 hover:text-blue-700 transition">
-            <Phone className="w-4 h-4" /> Contact Us
+          <Link href="/contact" className="flex items-center gap-1 hover:text-blue-700 transition whitespace-nowrap">
+            <Phone className="w-3 h-3 md:w-4 md:h-4" /> Contact Us
           </Link>
-          <Link href="#" className="flex items-center gap-1 hover:text-blue-700 transition">
-            <Briefcase className="w-4 h-4" /> Careers
+          <Link href="/academics/faculty" className="flex items-center gap-1 hover:text-blue-700 transition whitespace-nowrap">
+            <Briefcase className="w-3 h-3 md:w-4 md:h-4" /> Careers
           </Link>
         </div>
       </div>
@@ -86,10 +86,10 @@ export default function Navbar() {
               <GraduationCap className="w-7 h-7 text-white" />
             </div>
             <div>
-              <h1 className={`text-2xl font-bold tracking-wide leading-none `}>
+              <h1 className={`text-xl md:text-2xl font-bold tracking-wide leading-none `}>
                 BRIGHTFUTURE
               </h1>
-              <p className={`text-sm font-medium tracking-widest -mt-0.5 ${
+              <p className={`text-xs md:text-sm font-medium tracking-widest -mt-0.5 ${
                 isScrolled || !isHomePage ? 'text-gray-600' : 'text-blue-500'
               }`}>
                 SCHOOL
@@ -99,7 +99,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div
-            className={`hidden lg:flex items-center space-x-8 font-medium  text-gray-800`}
+            className={`hidden lg:flex items-center space-x-4 md:space-x-8 font-medium  text-gray-800`}
           >
             <Link href="/" className="px-3 py-2 hover:text-green-600 transition-colors duration-200">
               Home
@@ -157,11 +157,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 transition ${
-              isScrolled || !isHomePage
-                ? 'text-gray-700 hover:text-blue-700'
-                : 'text-white hover:text-blue-200'
-            }`}
+            className={`lg:hidden p-2 transition text-gray-700 hover:text-blue-700`}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -170,7 +166,7 @@ export default function Navbar() {
 
       {/* === Notification Bar === */}
       <div
-        className={`text-center py-2 text-sm font-medium tracking-wide overflow-hidden ${
+        className={`text-center py-2 text-xs md:text-sm font-medium tracking-wide overflow-hidden ${
           isScrolled || !isHomePage ? 'bg-blue-900 text-white' : 'bg-transparent text-black'
         }`}
       >
@@ -223,7 +219,7 @@ export default function Navbar() {
                         <Link
                           href={item.path}
                           className="block py-2 hover:text-green-600 transition"
-                          onClick={() => setIsMobileMenuOpen(false)}
+                          onClick={() => setSelectedNews(null)}
                         >
                           {item.name}
                         </Link>

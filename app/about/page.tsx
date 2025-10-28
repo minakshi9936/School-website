@@ -72,25 +72,25 @@ export default function AboutPage() {
       icon: Trophy,
       title: 'Sports & Athletics',
       desc: 'Encouraging teamwork, discipline, and physical excellence through various sports events and tournaments.',
-      img: '/campus/sports.jpg',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLGu6RHXV21yWqSIhfwdw4LRFDl9rqnzdBkQ&s',
     },
     {
       icon: Music,
       title: 'Cultural Events',
       desc: 'A vibrant platform for music, dance, and drama — celebrating diversity and creativity every semester.',
-      img: '/campus/cultural.jpg',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWpm6xrK3ltkd3xoupeLpf97-At8mmIAtnxw&s',
     },
     {
       icon: FlaskConical,
       title: 'Science & Innovation Labs',
       desc: 'State-of-the-art labs inspiring innovation, experiments, and discovery-based learning among students.',
-      img: '/campus/lab.jpg',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQPcOHKpi63axLNRtoJZCPE-zfYh7slX-Itw&s',
     },
     {
       icon: Camera,
       title: 'Library & Research Center',
       desc: 'A peaceful space with thousands of resources to explore, read, and research across subjects.',
-      img: '/campus/library.jpg',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0tT7Zsj3EaLK1AsbDr7cEyE013jlJSK23Iw&s',
     },
   ];
 
@@ -98,25 +98,25 @@ export default function AboutPage() {
     {
       name: 'Dr. Rakesh Mehra',
       role: 'Principal',
-      img: '/faculty/principal.jpg',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6mIaDnaxu6GBxYnGE1FtuGkfpVYBAxh1Bwg&s',
       desc: 'With 20+ years of leadership in education, Dr. Mehra champions innovation-driven teaching that nurtures excellence and character.',
     },
     {
       name: 'Ms. Nisha Patel',
       role: 'Vice Principal',
-      img: '/faculty/nisha.jpg',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsyjGOwzFYlw5Wv3wBcNUbD5gfHRqkhbYMSA&s',
       desc: 'An inspiring mentor, Ms. Patel cultivates creativity, confidence, and communication skills through literature and leadership programs.',
     },
     {
       name: 'Mr. Ankit Sharma',
       role: 'Head of Science Department',
-      img: '/faculty/ankit.jpg',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsANjHOWttrf6wtL2OcU5lHQaImKUbN0buYg&s',
       desc: 'A passionate science educator dedicated to experiential learning, research projects, and curiosity-driven discovery.',
     },
     {
       name: 'Mrs. Sneha Rao',
       role: 'Mathematics Faculty',
-      img: '/faculty/sneha.jpg',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz2KFIDy1aRwV2HFnCcVvNHPDb82VujJsXzQ&s',
       desc: 'Simplifying complex concepts with real-world applications, Mrs. Rao empowers analytical thinking and problem-solving.',
     },
   ];

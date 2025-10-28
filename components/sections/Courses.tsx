@@ -75,36 +75,36 @@ export default function Courses() {
     <SectionWrapper id="courses" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Our{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               Courses
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             A comprehensive curriculum designed to nurture every aspect of student development
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {courses.map((course, index) => {
             const Icon = course.icon;
             return (
-              <AnimatedCard key={index} delay={index * 0.1} className="p-8 cursor-pointer group">
+              <AnimatedCard key={index} delay={index * 0.1} className="p-6 md:p-8 cursor-pointer group">
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-br ${course.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-br ${course.color} flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <Icon className="w-8 h-8 text-white" />
+                  <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">{course.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-4">{course.shortDescription}</p>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-900">{course.title}</h3>
+                <p className="text-gray-600 leading-relaxed mb-4 text-sm md:text-base">{course.shortDescription}</p>
                 <button
                   onClick={() => setSelectedCourse(course)}
-                  className="text-blue-600 font-semibold hover:text-blue-700 transition-colors flex items-center"
+                  className="text-blue-600 font-semibold hover:text-blue-700 transition-colors flex items-center text-sm md:text-base"
                 >
                   Read More
                   <svg
-                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                    className="w-3 h-3 md:w-4 md:h-4 ml-1 group-hover:translate-x-1 transition-transform"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

@@ -14,3 +14,13 @@
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
+
+.bg-responsive {
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .bg-responsive {
+    background-size: cover;
+  }
+}

@@ -12,7 +12,7 @@ export default function AdmissionGuidelines() {
         className="relative h-[60vh] bg-cover bg-center"
         style={{ backgroundImage: "url('/images/admission-guidelines.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <div className="absolute inset-0 text-white bg-gradient-to-r from-blue-200 via-indigo-400 to-purple-700 overflow-hidden flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl text-white font-bold">
             Admission Guidelines
           </h1>
